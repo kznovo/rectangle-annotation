@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "label": "Pedestrian"
+    },
+    {
+        "id": 2,
+        "label": "Car"
+    },
+    {
+        "id": 3,
+        "label": "Truck"
+    },
+    {
+        "id": 4,
+        "label": "Stopsign"
+    }
+]

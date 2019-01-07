@@ -1,0 +1,4 @@
+/.venv
+Pipfile.lock
+/.vscode
+/__pycache
