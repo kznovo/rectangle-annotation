@@ -6,9 +6,9 @@ R(ectancle)annotation - Bounding box annotation tool
 
 |  sample usage  |  description  |
 | ----- | ----- |
-|  ![example1](https://github.com/kznovo/rectangle-annotation/tree/master/sample/add_resize_move.gif)  |  - Add label with a click.<br>  - Use the markers around the label to resize.<br>  - Drag, or use "hjkl" keys to move the label.<br>  - Double click or press delete/d key to erase the active label<br>  |
-|  ![example2](https://github.com/kznovo/rectangle-annotation/tree/master/sample/multilabel.gif)  |  - Active label appears as light green, while inactive label appears dark green.<br>  - You can edit the active label's coordinates and categories<br>  - Switch active label's category with number keys.<br>  - Switch active labels by tab key  |
-|  ![example3](https://github.com/kznovo/rectangle-annotation/tree/master/sample/csv_resume.gif)  |  - All the changes made will be overwritten to the csv<br>  - The labels will be loaded from the csv from the next time the same image is opened  |
+|  ![example1](https://github.com/kznovo/rectangle-annotation/blob/master/sample/annotation_tool_sample_add_resize_move.gif)  |  - Add label with a click.<br>  - Use the markers around the label to resize.<br>  - Drag, or use "hjkl" keys to move the label.<br>  - Double click or press delete/d key to erase the active label<br>  |
+|  ![example2](https://github.com/kznovo/rectangle-annotation/blob/master/sample/annotation_tool_sample_multilabel.gif)  |  - Active label appears as light green, while inactive label appears dark green.<br>  - You can edit the active label's coordinates and categories<br>  - Switch active label's category with number keys.<br>  - Switch active labels by tab key  |
+|  ![example3](https://github.com/kznovo/rectangle-annotation/blob/master/sample/annotation_tool_sample_csv_resume.gif)  |  - All the changes made will be overwritten to the csv<br>  - The labels will be loaded from the csv from the next time the same image is opened  |
 
 
 
