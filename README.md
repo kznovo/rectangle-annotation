@@ -99,11 +99,10 @@ rannotate \
 
 
 
-- Notes: 
+## Notes
 
-  - csv should contain the following fields:
-    `['filename', 'obj_name', 'xmin', 'ymin', 'xmax', 'ymax']`
-    
-    If there's no csv file in the path then a new csv file will be created.
+- csv should contain the following fields:  
+`['filename', 'obj_name', 'xmin', 'ymin', 'xmax', 'ymax']`  
+If there's no csv file in the path then a new csv file will be created.
 
-  - Currently the tool only supports **up to 10 categories**.
+- Currently the tool only supports **up to 10 categories**.
