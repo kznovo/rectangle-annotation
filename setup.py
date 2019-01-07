@@ -14,7 +14,7 @@ setup(
         "opencv-python"
     ],
     entry_points = {
-        "console_scripts": ["rannotate=rannotation.annotate:main"]
+        "console_scripts": ["rannotate=rannotation:main"]
     },
     zip_safe=False
 )
