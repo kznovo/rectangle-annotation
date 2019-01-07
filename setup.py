@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
+
 from setuptools import setup
 
 setup(
     name="rannotation",
-    version="0.1",
+    version="0.1.1",
     description="rectangle annotation tool for object detection dataset creation",
     keywords="cnn objectdetection annotation image",
     url="https://github.com/kznovo/rectangle-annotation",

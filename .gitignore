@@ -3,3 +3,6 @@ Pipfile.lock
 /.vscode
 /__pycache
 *.pyc
+/dist
+/build
+/rannotation.egg-info
