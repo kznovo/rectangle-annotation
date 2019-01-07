@@ -21,7 +21,7 @@ pip install rannotation
 ## Usage
 
 1. Prepare images in a directory.
-2. Create a labelmap (json). Ex:
+2. Create a labelmap in json format. Ex:
 
 ```json
 [
@@ -97,6 +97,11 @@ rannotate \
 
   - **i** :      Predict labels using the prediction model  
 
+
+## Sample usage
+1. Clone this repo
+2. Install rannotation
+3. Use `./sample/annotation_tool_sample_sample.csv`, `./sample/labelmap.json`, and `./*.jpg` for sample data
 
 
 ## Notes
