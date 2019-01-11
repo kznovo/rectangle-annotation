@@ -30,11 +30,7 @@ class CircleObject:
         self.radius = radius
 
     def catch_click(self, x, y):
-        clicked = (
-            (x - self.center_x) ** 2 + (y - self.center_y) ** 2 <
-            self.radius ** 2
-        )
-        return clicked
+        return (x - self.center_x) ** 2 + (y - self.center_y) ** 2 < self.radius ** 2
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.circle(
