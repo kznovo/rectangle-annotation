@@ -10,7 +10,7 @@ class RectangleObject:
         self.ymax = ymax
 
     def catch_click(self, x, y):
-        return (self.xmin <= x <= self.xmax) & (self.ymin <= y <= self.ymax)
+        return (self.xmin <= x <= self.xmax) and (self.ymin <= y <= self.ymax)
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.rectangle(
