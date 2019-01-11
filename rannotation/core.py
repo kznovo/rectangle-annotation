@@ -200,10 +200,13 @@ class Painter:
 
     def tab_behavior(self, ascending=True):
         if len(self.canvas.objects) > 0:
-            tops = sorted([
-                (obj.get_top_coordinate(), obj)
-                for obj in self.canvas.objects
-            ], key=lambda x: x[0])
+            tops = sorted(
+                (
+                    (obj.get_top_coordinate(), obj)
+                    for obj in self.canvas.objects
+                ),
+                key=lambda x: x[0]
+            )
             if ascending:
                 self.active_cursor += 1
                 if len(tops) <= self.active_cursor:
