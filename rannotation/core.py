@@ -68,15 +68,7 @@ class Painter:
                 110: self.key_n,
                 115: self.key_s,
                 113: self.key_q,
-                49: self.key_numeric,
-                50: self.key_numeric,
-                51: self.key_numeric,
-                52: self.key_numeric,
-                53: self.key_numeric,
-                54: self.key_numeric,
-                55: self.key_numeric,
-                56: self.key_numeric,
-                57: self.key_numeric,
+                **{x: self.key_numeric for x in range(49, 58)},
             },
         )
 
