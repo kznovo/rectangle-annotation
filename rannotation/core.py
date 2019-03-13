@@ -52,29 +52,33 @@ class Painter:
 
         self.canvas = canvas
         self.canvas.on_mouse = self.on_mouse
-        keymap = defaultdict(lambda: lambda *args: None)
-        keymap[13] = self.key_enter
-        keymap[9] = self.key_tab
-        keymap[8] = self.key_delete
-        keymap[104] = self.key_left
-        keymap[106] = self.key_down
-        keymap[107] = self.key_up
-        keymap[108] = self.key_right
-        keymap[98] = self.key_b
-        keymap[100] = self.key_delete
-        keymap[110] = self.key_n
-        keymap[115] = self.key_s
-        keymap[113] = self.key_q
-        keymap[49] = self.key_numeric
-        keymap[50] = self.key_numeric
-        keymap[51] = self.key_numeric
-        keymap[52] = self.key_numeric
-        keymap[53] = self.key_numeric
-        keymap[54] = self.key_numeric
-        keymap[55] = self.key_numeric
-        keymap[56] = self.key_numeric
-        keymap[57] = self.key_numeric
-        self.canvas.keymap = keymap
+
+        self.canvas.keymap = defaultdict(
+            lambda: lambda *args: None,
+            {
+                13: self.key_enter,
+                9: self.key_tab,
+                8: self.key_delete,
+                104: self.key_left,
+                106: self.key_down,
+                107: self.key_up,
+                108: self.key_right,
+                98: self.key_b,
+                100: self.key_delete,
+                110: self.key_n,
+                115: self.key_s,
+                113: self.key_q,
+                49: self.key_numeric,
+                50: self.key_numeric,
+                51: self.key_numeric,
+                52: self.key_numeric,
+                53: self.key_numeric,
+                54: self.key_numeric,
+                55: self.key_numeric,
+                56: self.key_numeric,
+                57: self.key_numeric,
+            },
+        )
 
     def on_mouse(self, event, x, y, flags, params):
         if flags == 1:
