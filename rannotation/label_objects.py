@@ -34,8 +34,7 @@ class CircleObject:
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.circle(
-            img_array, (int(self.center_x), int(
-                self.center_y)), self.radius, color, 2
+            img_array, (int(self.center_x), int(self.center_y)), self.radius, color, 2
         )
         return img_array
 
@@ -85,8 +84,7 @@ class BBoxlabel:
         text_bot = (self.body.xmin + 80, self.body.ymin + 5)
         text_pos = (self.body.xmin + 5, self.body.ymin)
         cv2.rectangle(
-            img_array, tuple(map(int, text_top)), tuple(
-                map(int, text_bot)), color, -1
+            img_array, tuple(map(int, text_top)), tuple(map(int, text_bot)), color, -1
         )
         cv2.putText(
             img_array,
