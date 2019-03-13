@@ -18,7 +18,7 @@ class RectangleObject:
             (int(self.xmin), int(self.ymin)),
             (int(self.xmax), int(self.ymax)),
             color,
-            2
+            2,
         )
         return img_array
 
@@ -30,19 +30,12 @@ class CircleObject:
         self.radius = radius
 
     def catch_click(self, x, y):
-        clicked = (
-            (x - self.center_x) ** 2 + (y - self.center_y) ** 2 <
-            self.radius ** 2
-        )
+        clicked = (x - self.center_x) ** 2 + (y - self.center_y) ** 2 < self.radius ** 2
         return clicked
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.circle(
-            img_array,
-            (int(self.center_x), int(self.center_y)),
-            self.radius,
-            color,
-            2
+            img_array, (int(self.center_x), int(self.center_y)), self.radius, color, 2
         )
         return img_array
 
@@ -59,12 +52,12 @@ class BBoxlabel:
         x = (
             self.body.xmin,
             self.body.xmin + (self.body.xmax - self.body.xmin) / 2,
-            self.body.xmax
+            self.body.xmax,
         )
         y = (
             self.body.ymin,
             self.body.ymin + (self.body.ymax - self.body.ymin) / 2,
-            self.body.ymax
+            self.body.ymax,
         )
         sm_coords = list(product(x, y))
         del sm_coords[4]  # center xy
@@ -92,11 +85,7 @@ class BBoxlabel:
         text_bot = (self.body.xmin + 80, self.body.ymin + 5)
         text_pos = (self.body.xmin + 5, self.body.ymin)
         cv2.rectangle(
-            img_array,
-            tuple(map(int, text_top)),
-            tuple(map(int, text_bot)),
-            color,
-            -1
+            img_array, tuple(map(int, text_top)), tuple(map(int, text_bot)), color, -1
         )
         cv2.putText(
             img_array,
@@ -105,7 +94,7 @@ class BBoxlabel:
             cv2.FONT_HERSHEY_SIMPLEX,
             0.35,
             (0, 0, 0),
-            1
+            1,
         )
         return img_array
 
@@ -115,7 +104,7 @@ class BBoxlabel:
             self.body.xmin,
             self.body.ymin,
             self.body.xmax,
-            self.body.ymax
+            self.body.ymax,
         ]
 
     @classmethod

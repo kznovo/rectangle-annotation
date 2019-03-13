@@ -22,7 +22,7 @@ class Canvas:
         while True:
             cv2.imshow(self.filename, self.img_show)
             key = cv2.waitKey(1) & 0xFF
-            out = self.keymap[key](key-48)
+            out = self.keymap[key](key - 48)
             if out:
                 return out
 
@@ -92,8 +92,7 @@ class Painter:
         for obj in self.canvas.objects:
             if obj == self.canvas.active_obj:
                 self.canvas.img_show = obj.draw(
-                    self.canvas.img_show, self.active_color
-                )
+                    self.canvas.img_show, self.active_color)
                 if self.show_label:
                     self.canvas.img_show = obj.draw_category(
                         self.canvas.img_show, self.active_color
@@ -116,8 +115,7 @@ class Painter:
         self.canvas.img_show = self.canvas.img_base.copy()
         for obj in self.canvas.objects:
             self.canvas.img_show = obj.draw(
-                self.canvas.img_show, self.inactive_color
-            )
+                self.canvas.img_show, self.inactive_color)
             self.canvas.img_show = obj.draw_category(
                 self.canvas.img_show, self.inactive_color
             )
@@ -200,10 +198,11 @@ class Painter:
 
     def tab_behavior(self, ascending=True):
         if len(self.canvas.objects) > 0:
-            tops = sorted([
-                (obj.get_top_coordinate(), obj)
-                for obj in self.canvas.objects
-            ], key=lambda x: x[0])
+            tops = sorted(
+                [(obj.get_top_coordinate(), obj)
+                 for obj in self.canvas.objects],
+                key=lambda x: x[0],
+            )
             if ascending:
                 self.active_cursor += 1
                 if len(tops) <= self.active_cursor:

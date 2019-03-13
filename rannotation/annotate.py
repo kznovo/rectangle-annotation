@@ -1,15 +1,16 @@
-import sys
-sys.setrecursionlimit(10**9)
-import argparse
-import json
-from pathlib import Path
-from .core import Canvas, Painter
-from .label_objects import BBoxlabel
 from .helpers import CSVLabelHandler
+from .label_objects import BBoxlabel
+from .core import Canvas, Painter
+from pathlib import Path
+import json
+import argparse
+import sys
+
+sys.setrecursionlimit(10 ** 9)
 
 
 def interpret_signal(signal):
-    '''signal interpretation
+    """signal interpretation
     returning numbers:
         1: to the next image
         -1: previous image
@@ -17,7 +18,7 @@ def interpret_signal(signal):
         None: remain and do nothing
     returning sequence:
         add_page, model_inference, quit
-    '''
+    """
     if signal == 1:
         # next image
         return 1, False
@@ -25,9 +26,9 @@ def interpret_signal(signal):
     elif signal == 2:
         # quit
         return None, True
-    
+
     elif signal == -1:
-        #previous image
+        # previous image
         return -1, False
 
     else:
