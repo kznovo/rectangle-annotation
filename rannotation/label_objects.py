@@ -10,7 +10,7 @@ class RectangleObject:
         self.ymax = ymax
 
     def catch_click(self, x, y):
-        return (self.xmin <= x <= self.xmax) & (self.ymin <= y <= self.ymax)
+        return (self.xmin <= x <= self.xmax) and (self.ymin <= y <= self.ymax)
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.rectangle(
@@ -30,12 +30,12 @@ class CircleObject:
         self.radius = radius
 
     def catch_click(self, x, y):
-        clicked = (x - self.center_x) ** 2 + (y - self.center_y) ** 2 < self.radius ** 2
-        return clicked
+        return (x - self.center_x) ** 2 + (y - self.center_y) ** 2 < self.radius ** 2
 
     def draw(self, img_array, color=(0, 255, 0)):
         cv2.circle(
-            img_array, (int(self.center_x), int(self.center_y)), self.radius, color, 2
+            img_array, (int(self.center_x), int(
+                self.center_y)), self.radius, color, 2
         )
         return img_array
 
@@ -85,7 +85,8 @@ class BBoxlabel:
         text_bot = (self.body.xmin + 80, self.body.ymin + 5)
         text_pos = (self.body.xmin + 5, self.body.ymin)
         cv2.rectangle(
-            img_array, tuple(map(int, text_top)), tuple(map(int, text_bot)), color, -1
+            img_array, tuple(map(int, text_top)), tuple(
+                map(int, text_bot)), color, -1
         )
         cv2.putText(
             img_array,
