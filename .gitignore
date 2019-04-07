@@ -6,4 +6,3 @@ Pipfile.lock
 /dist
 /build
 /rannotation.egg-info
-.mypy_cache
