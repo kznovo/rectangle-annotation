@@ -1,9 +1,0 @@
-{
-  "name": "rannotation",
-  "version": "1.0.0",
-  "description": "rannotation docs",
-  "main": "src/index.js",
-  "repository": "https://github.com/kznovo/rectangle-annotation",
-  "author": "Kauzya Hatta",
-  "license": "MIT"
-}
